@@ -14,7 +14,8 @@ def main():
     with open(reportPath) as f:
         reportText = f.read()
     sid = sendWhatssap(reportText)
-    print(f'Reporte enviado con SID: {sid}')
+    print('\nReporte enviado al WhatsApp')
+    print(f'SID: {sid}')
 
 if __name__ == '__main__':
     main()

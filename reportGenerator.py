@@ -20,11 +20,20 @@ def writeReport(analysisResults: dict, segmentSales, plotPath: str,
     segmentFmt = segmentSales.map(lambda x: f"${x:,.0f}")
 
     with open(outputPath, 'w') as f:
-        f.write('REPORTE DE VENTAS:\n')
+        f.write('REPORTE:\n')
         f.write(f"Total de ventas: ${total:,.0f}\n")
         f.write(f"Promedio de venta: ${avg:,.2f}\n\n")
         f.write('ESTADISTICAS DESCRIPTIVAS\n')
         f.write(stats.to_string(float_format='{:,.2f}'.format))
         f.write('\n\nVENTAS POR SEGMENTOS\n')
         f.write(segmentFmt.to_string())
+
+    print('\nREPORTE:')
+    print(f"Total de ventas: ${total:,.0f}")
+    print(f"Promedio de venta: ${avg:,.2f}\n")
+    print('ESTADISTICAS DESCRIPTIVAS')
+    print(stats.to_string(float_format='{:,.2f}'.format))
+    print('\nVENTAS POR SEGMENTOS')
+    print(segmentFmt.to_string())
+
     return outputPath

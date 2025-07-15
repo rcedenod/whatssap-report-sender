@@ -1,4 +1,4 @@
-REPORTE DE VENTAS:
+REPORTE:
 Total de ventas: $487,261,584
 Promedio de venta: $34,309.36
 
